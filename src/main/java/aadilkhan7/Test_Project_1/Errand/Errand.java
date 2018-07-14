@@ -1,5 +1,6 @@
 package aadilkhan7.Test_Project_1.Errand;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,14 +15,17 @@ public class Errand {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	int errandId;
-	
+	@Column(name = "Description")
 	String description;
+	@Column(name = "DueDate")
 	String dueDate;
+	@Column(name = "Reward")
 	String reward;
+	@Column(name = "Location")
 	String location;
-	
+	@Column(name = "PostedByUserId")
 	int postedByUserId;
-	int status;
+	
 	
 	Errand(){
 		

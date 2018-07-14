@@ -23,9 +23,12 @@ public class Job {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	int jobId;
+	int jobId;	
+	@Column(name = "AssignedToUserId")
 	int assignedToUserId;
+	@Column(name = "PostedByUserId")
 	int postedByUserId;
+	@Column(name = "ErrandId")
 	int errandId;
 
 	Job() {

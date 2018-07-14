@@ -42,21 +42,10 @@ public class User {
 	@NotEmpty(message = "Please provide your phone number")
 	private String phoneNumber;
 	
-
-	@Column(name = "enabled")
-	private boolean enabled;	
+	@Column(name = "location")
+	@NotEmpty(message = "Please provide your locatoin")
+	private String location;
 	
-	@Column(name = "confirmation_token")
-	private String confirmationToken;
-
-	public String getConfirmationToken() {
-		return confirmationToken;
-	}
-
-	public void setConfirmationToken(String confirmationToken) {
-		this.confirmationToken = confirmationToken;
-	}
-
 	public int getId() {
 		return id;
 	}
@@ -103,6 +92,14 @@ public class User {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+	public String getLocation() {
+		return location;
+	}
+
+	public void setLocation(String location) {
+		this.location = location;
 	}
 
 }

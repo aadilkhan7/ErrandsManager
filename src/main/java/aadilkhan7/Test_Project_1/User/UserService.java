@@ -1,6 +1,7 @@
 package aadilkhan7.Test_Project_1.User;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,8 +29,12 @@ public class UserService {
 	}
 
 	public List<User> getAllUsers() {
-		
-		return null;
+		List<User> allUsers = new ArrayList<User>();
+		Iterable<User> it = userRepository.findAll();
+		for(Iterator<User> i = it.iterator(); i.hasNext();) {
+			allUsers.add(i.next());
+		}		
+		return allUsers;
 	}
 
 }
