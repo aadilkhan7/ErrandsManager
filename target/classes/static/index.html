@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
+<meta charset="UTF-8" content = "application/json"></meta>
 <title>Register</title>
 </head>
 <body>
 <h1 align="center">Test Project 1</h1>
 	<div id="DivRegisterForm" align="center" >
-		<form id="registerForm" action="/register" method="post">
+		<form id="registerForm" action="/registerMe" method="post">
 			<table>		
-				<tr><td>Name</td><td><input type="text" id="name" value="name"></td></tr>
-				<tr><td>eMail</td><td><input type="text" id="email" value="email"></td></tr>
-				<tr><td>Password</td><td><input type="password" id="password" value="password"></td></tr>
-				<tr><td>Location</td><td><input type="text" id="location" value="location"></td></tr>
+				<tr><td>first Name</td><td><input type="text" id="firstName" ></td></tr>
+				<tr><td>last Name</td><td><input type="text" id="lastName"></td></tr>
+				<tr><td>eMail</td><td><input type="text" id="email"></td></tr>
+				<tr><td>phone</td><td><input type="text" id="phone"></td></tr>
+				<tr><td>Location</td><td><input type="text" id="location"></td></tr>
+				<tr><td>Password</td><td><input type="password" id="password"></td></tr>
+				
 				<tr align="center"><td><input type="submit" id="register" value="register"></td></tr>
 			</table>		
 		</form>
